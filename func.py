@@ -1,8 +1,8 @@
 def menu ():
-    menu = """1)
-    2)
-    3)
-    3)""" #definir segun enunciado
+    menu = """1)Agregar Articulo
+2)Listado de Articulos
+3)Encontrar Articulo
+4)salir""" #definir segun enunciado
     print(menu, end ="")
 
 
@@ -25,17 +25,17 @@ def agregar ():
     dire = input("Ingrese el director: ")
     anio = input("Ingrese el año: ")
 
-    res = {"Codigo":cod,"Nombre":nom,"Categoria":cod,"Director:":dire,"Año":anio}
+    res = {"codigo":cod,"nombre":nom,"categoria":cate,"director":dire,"año":anio}
     return res
 
 def lista_Articulo(lista):
-    for i in range(len(lista_Articulo)):
+    for i in range(len(lista)):
         print(f"Articulo {i+1}:")
-        print(f"Código {lista[i]["Codigo"]}")
-        print(f"Nombre {lista[i]["Nombre"]}")
-        print(f"Categoría{lista[i]["Categoria"]}")
-        print(f"Director {lista[i]["Director"]}")
-        print(f"Año {lista [i]["Año"]}")
+        print(f"Código {lista[i]["codigo"]}")
+        print(f"Nombre {lista[i]["nombre"]}")
+        print(f"Categoría{lista[i]["categoria"]}")
+        print(f"Director {lista[i]["director"]}")
+        print(f"Año {lista [i]["año"]}")
         print("--------------------------------------------------")
 
 def encontrar_articulo(lista):
@@ -43,17 +43,17 @@ def encontrar_articulo(lista):
     enc = False
 
     for i in range(len(lista)):
-        if cu == lista[i]["Codigo"]:
+        if cu == lista[i]["codigo"]:
             res = lista[i]
             encontrado = True
 
     if encontrado:
         print(f"Articulo {i+1}:")
-        print(f"Código {res[i]["Codigo"]}")
-        print(f"Nombre {res[i]["Nombre"]}")
-        print(f"Categoría{res[i]["Categoria"]}")
-        print(f"Director {res[i]["Director"]}")
-        print(f"Año {res[i]["Año"]}")
+        print(f"Código {res[i]["codigo"]}")
+        print(f"Nombre {res[i]["nombre"]}")
+        print(f"Categoría{res[i]["categoria"]}")
+        print(f"Director {res[i]["director"]}")
+        print(f"Año {res[i]["año"]}")
     else:
         print("Pelicula no encontrada")   
         

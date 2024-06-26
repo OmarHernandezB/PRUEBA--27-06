@@ -6,7 +6,7 @@ peliculas = [] #lista
 
 while op !=4:
     func.menu()
-    op = func.agregar()
+    op = func.opcion_seleccionada()
 
     if op == 1:
         peliculas.append(func.agregar())
