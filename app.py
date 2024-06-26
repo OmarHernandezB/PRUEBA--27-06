@@ -1,25 +1,18 @@
-import funciones
-from os import system
+import func
 
 op = 0
 peliculas = [] #lista
 #codigo,nombre,categoria,director,actores,año
 
 while op !=4:
-    system("cls")
-    funciones.mostrar_menu()
-    op = funciones.get_opcion()
+    func.menu()
+    op = func.agregar()
 
     if op == 1:
-        system("cls")
-        peliculas.append(funciones.agregar_pelicula())
+        peliculas.append(func.agregar())
     elif op == 2:
-        system("cls")
-        funciones.listar_peliculas(peliculas)
-        system("pause")
+        func.lista_Articulo(peliculas)
     elif op == 3:
-        system("cls")
-        funciones.buscar_pelicula(peliculas)
-        system("pause")
+        func.encontrar_articulo(peliculas)
 
-funciones.crear_archivo(peliculas)
+func.crear_archivo(peliculas)
