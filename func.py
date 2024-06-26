@@ -59,7 +59,7 @@ def encontrar_articulo(lista):
         
 
 def archivo (lista):
-    with open("lista_peliculas.txt","w") as archivo:
+    with open("lista_particulos.txt","w") as archivo:
         for i in range (lista):
             res = i["codigo"]+", "+i["nombre"]+", "+i["categoria"]+", "+i["director"]+", "+i["año"]+"\n"
             archivo.write(res)
