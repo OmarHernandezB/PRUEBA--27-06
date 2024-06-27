@@ -39,21 +39,21 @@ def lista_Articulo(lista):
         print("--------------------------------------------------")
 
 def encontrar_articulo(lista):
-    cu = int(input("Ingrese el código del articulo"))
+    cu = input("Ingrese el código del articulo")
     enc = False
 
     for i in range(len(lista)):
         if cu == lista[i]["codigo"]:
             res = lista[i]
-            encontrado = True
+            enc = True
 
-    if encontrado:
+    if enc:
         print(f"Articulo {i+1}:")
-        print(f"Código {res[i]["codigo"]}")
-        print(f"Nombre {res[i]["nombre"]}")
-        print(f"Categoría{res[i]["categoria"]}")
-        print(f"Director {res[i]["director"]}")
-        print(f"Año {res[i]["año"]}")
+        print(f"Código {res["codigo"]}")
+        print(f"Nombre {res["nombre"]}")
+        print(f"Categoría{res["categoria"]}")
+        print(f"Director {res["director"]}")
+        print(f"Año {res["año"]}")
     else:
         print("Pelicula no encontrada")   
         
